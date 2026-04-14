@@ -1,7 +1,7 @@
 {
   "id": "github",
   "name": "GitHub",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "sdkVersion": 2,
   "description": "GitHub integration: repositories, pull requests, reviews, cloning, git log",
   "icon": "github",
@@ -11,29 +11,12 @@
     "github", "git hub", "gh", "pull request", "pr", "code review",
     "clone repo", "clone from github", "github repo", "github repos"
   ],
-  "activationConditions": { "always": true },
-  "bundled": true,
+  "activationConditions": { "configKeys": ["GitHubPAT"] },
   "settings": [],
   "contributions": {
     "nativeSettings": {
       "targetId": "settingsSection-github"
     },
-    "centerTabs": [
-      {
-        "id": "github-pr",
-        "label": "Pull Requests",
-        "icon": "git-pull-request",
-        "html": "ui/pr-tab.html"
-      }
-    ],
-    "rightTabs": [
-      {
-        "id": "github-git-log",
-        "label": "Git Log",
-        "icon": "git-commit",
-        "html": "ui/git-log.html"
-      }
-    ],
     "repoSources": [
       {
         "id": "github",
