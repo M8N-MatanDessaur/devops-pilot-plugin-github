@@ -1,7 +1,7 @@
 {
   "id": "github",
   "name": "GitHub",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "sdkVersion": 2,
   "description": "GitHub integration: repositories, pull requests, reviews, cloning, git log",
   "icon": "github",
@@ -14,6 +14,7 @@
   "activationConditions": { "configKeys": ["GitHubPAT"] },
   "settings": [],
   "contributions": {
+    "routes": "routes.js",
     "nativeSettings": {
       "targetId": "settingsSection-github"
     },
