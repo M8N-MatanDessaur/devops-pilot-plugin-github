@@ -36,10 +36,14 @@
     "nativeSettings": {
       "targetId": "settingsSection-github"
     },
-    "legacyNativeTabs": [
+    "centerTabs": [
       {
-        "tabBtnId": "prsTabBtn",
-        "panelId": "panel-prs",
+        "id": "prs",
+        "label": "Pull Requests",
+        "icon": "git-pull-request",
+        "pinned": true,
+        "position": 4,
+        "claims": { "tabBtnId": "prsTabBtn", "panelId": "panel-prs" },
         "openable": true
       }
     ],
@@ -72,10 +76,13 @@
       "reviewRoute": "/api/github/pulls/review",
       "createRoute": "/api/pull-request"
     },
-    "legacyNativeRightTabs": [
+    "rightTabs": [
       {
-        "tabBtnId": "intelTab-gitlog",
-        "panelId": "ipanel-gitlog"
+        "id": "gitlog",
+        "label": "Git Log",
+        "pinned": true,
+        "position": 2,
+        "claims": { "tabBtnId": "intelTab-gitlog", "panelId": "ipanel-gitlog" }
       }
     ]
   }

@@ -3,7 +3,7 @@
 // Registers at absolute paths (not under /api/plugins/github/) so the URL
 // contracts the frontend and AI already use keep working after extraction.
 // When this plugin is uninstalled / unconfigured, the core route gate 404s
-// the same URLs with pluginRequired: 'github'. See the main DevOps Pilot
+// the same URLs with pluginRequired: 'github'. See the main Symphonee
 // repo, feature/plugin-first-shell branch.
 
 module.exports = function register(ctx) {
@@ -41,7 +41,7 @@ module.exports = function register(ctx) {
         headers: {
           'Authorization': `token ${pat}`,
           'Accept': accept || 'application/vnd.github+json',
-          'User-Agent': 'DevOps-Pilot',
+          'User-Agent': 'Symphonee',
           'Content-Type': 'application/json',
         },
       };
@@ -315,7 +315,7 @@ module.exports = function register(ctx) {
       hostname: parsed.hostname,
       path: parsed.pathname + parsed.search,
       method: 'GET',
-      headers: { 'Authorization': `token ${pat}`, 'User-Agent': 'DevOps-Pilot', 'Accept': '*/*' },
+      headers: { 'Authorization': `token ${pat}`, 'User-Agent': 'Symphonee', 'Accept': '*/*' },
     };
     const proxy = https.request(options, (upstream) => {
       if (upstream.statusCode === 301 || upstream.statusCode === 302) {
@@ -326,7 +326,7 @@ module.exports = function register(ctx) {
             hostname: redir.hostname,
             path: redir.pathname + redir.search,
             method: 'GET',
-            headers: { 'User-Agent': 'DevOps-Pilot', 'Accept': '*/*' },
+            headers: { 'User-Agent': 'Symphonee', 'Accept': '*/*' },
           };
           const r2 = https.request(redirOpts, (resp2) => {
             res.writeHead(resp2.statusCode, {

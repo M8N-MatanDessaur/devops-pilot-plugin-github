@@ -1,6 +1,6 @@
 # GitHub Plugin
 
-The GitHub plugin owns every interaction with github.com in DevOps Pilot: pull requests, reviews, repo discovery, cloning, and the git log sidebar.
+The GitHub plugin owns every interaction with github.com in Symphonee: pull requests, reviews, repo discovery, cloning, and the git log sidebar.
 
 ## Routes
 

@@ -1,14 +1,14 @@
-# GitHub Plugin for DevOps Pilot
+# GitHub Plugin for Symphonee
 
-Integrates GitHub into DevOps Pilot: pull requests, reviews, cloning, and the git log sidebar.
+Integrates GitHub into Symphonee: pull requests, reviews, cloning, and the git log sidebar.
 
 ## Installation
 
-1. Clone into your DevOps Pilot plugins folder:
+1. Clone into your Symphonee plugins folder:
    ```
-   git clone https://github.com/M8N-MatanDessaur/devops-pilot-plugin-github.git dashboard/plugins/github
+   git clone https://github.com/M8N-MatanDessaur/symphonee-plugin-github.git dashboard/plugins/github
    ```
-2. Restart DevOps Pilot.
+2. Restart Symphonee.
 3. Open **Settings -> Plugins -> GitHub** and paste your Personal Access Token (classic, `repo` scope).
 
 ## What it contributes

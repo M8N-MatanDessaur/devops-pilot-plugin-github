@@ -4,7 +4,7 @@
 
 .DESCRIPTION
     Pushes the current branch to origin, then creates a pull request via the
-    DevOps Pilot API (which calls GitHub). Automatically detects the current
+    Symphonee API (which calls GitHub). Automatically detects the current
     branch and links to the Azure DevOps work item if the branch contains AB#ID.
 
 .PARAMETER Repo
@@ -66,7 +66,7 @@ if ($branch -match 'AB#(\d+)') {
     Write-Host "Linked work item: #$workItemId" -ForegroundColor Cyan
 }
 
-# Create PR on GitHub via DevOps Pilot API
+# Create PR on GitHub via Symphonee API
 $body = @{
     repoName = $Repo
     title = $Title
